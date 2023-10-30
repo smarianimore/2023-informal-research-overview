@@ -59,6 +59,30 @@
               ## Me, in a nutshell
               ----
               * 2012 - Master Degree in Computer Science & Engineering at UNIBO
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Me, in a nutshell
+              ----
+              * 2012 - Master Degree in Computer Science & Engineering at UNIBO
+              * 2016 - PhD in Computer Science at UNIBO
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Me, in a nutshell
+              ----
+              * 2012 - Master Degree in Computer Science & Engineering at UNIBO
+              * 2016 - PhD in Computer Science at UNIBO
+              * 2016 - RTD a) at UNIMORE
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Me, in a nutshell
+              ----
+              * 2012 - Master Degree in Computer Science & Engineering at UNIBO
               * 2016 - PhD in Computer Science at UNIBO
               * 2016 - RTD a) at UNIMORE
               * 2023 - RTD b) at UNIMORE (yeeeee!)
@@ -72,21 +96,63 @@
               ## My research, in a nutshell
               ----
               * Coordination models and languages
-                <small><ul>
-                  <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
-                </ul></small>
+              <small><ul>
+                <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
+              </ul></small>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## My research, in a nutshell
+              ----
+              * Coordination models and languages
+              <small><ul>
+                <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
+              </ul></small>
               * Learning to communicate and coordinate
-                <small><ul>
-                  <li> RL applied to communication protocols and coordination mechanisms </li>
-                </ul></small>
+              <small><ul>
+                <li> RL applied to communication protocols and coordination mechanisms </li>
+              </ul></small>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## My research, in a nutshell
+              ----
+              * Coordination models and languages
+              <small><ul>
+                <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
+              </ul></small>
+              * Learning to communicate and coordinate
+              <small><ul>
+                <li> RL applied to communication protocols and coordination mechanisms </li>
+              </ul></small>
               * Self-organisation in MAS
-                <small><ul>
-                  <li> how to achieve global behaviours with local rules? </li>
-                </ul></small>
+              <small><ul>
+                <li> how to achieve global behaviours with local rules? </li>
+              </ul></small>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## My research, in a nutshell
+              ----
+              * Coordination models and languages
+              <small><ul>
+                <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
+              </ul></small>
+              * Learning to communicate and coordinate
+              <small><ul>
+                <li> RL applied to communication protocols and coordination mechanisms </li>
+              </ul></small>
+              * Self-organisation in MAS
+              <small><ul>
+                <li> how to achieve global behaviours with local rules? </li>
+              </ul></small>
               * Self-development in software agents
-                <small><ul>
-                  <li> learning structural causal models of the world </li>
-                </ul></small>
+              <small><ul>
+                <li> learning structural causal models of the world </li>
+              </ul></small>
 
               **Essentially: make multiple entities coordinate at best with minimal "design effort"**
             </script>
@@ -96,21 +162,86 @@
         <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ### Zoom-in: Learning to coordinate
+              ## Zoom-in: Learning to coordinate
               ----
               How to let autonomous agents independently learn to exploit communication for coordinating?
-
-              <iframe width="560" height="400" src="https://www.youtube-nocookie.com/embed/1qUBvnw3tbU?si=-wSED54cdZFzg_YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </script>
           </section>
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ### Zoom-in: Learning to coordinate
+              <!-- .slide: data-background-image="res/slime-mold-1.jpg" data-background-opacity="0.1" data-background-size="cover" -->
+              ### MARL environment
               ----
-              <img width="65%" data-src="res/BS-3actions-gradient-ticks-01-11_45_55_375_AM-26-Jan-2023_episode timestep.png">
-              <small> <br><br><br><br> learning agents </small>
-              <img width="65%" data-src="res/BS-baseline-nolearn-01-10_24_06_507_AM-26-Jan-2023_episode timestep.png">
-              <small> <br><br><br><br> hard-coded policies </small>
+              <iframe width="800" height="480" src="https://www.youtube.com/embed/WfnToGc3F1g?si=XvAxPNIWdF6rH9PS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+              <small>Pheromone-based coordination: applications in MAS and swarm robotics</small>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ### MARL problem formulation
+              ----
+              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
+              * Action space (1 $\forall$ experiment):
+              <ul><small>
+                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
+                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
+                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
+                <li> d,e (<em>hard-coded baseline</em>) </li>
+              </small></ul>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ### MARL problem formulation
+              ----
+              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
+              * Action space (1 $\forall$ experiment):
+              <ul><small>
+                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
+                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
+                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
+                <li> d,e (<em>hard-coded baseline</em>) </li>
+              </small></ul>
+              * Reward functions (<em>tests adaptation</em>):
+              <ul><small>
+                <li> clustering: $R(s,a) = (\tau * {\color{green}r}) + (\frac{c_s}{c_{th}} * {\color{green}r}^2) + (\bar\tau * {\color{red}p})$ (big, durable blobs) </li>
+                <li> scattering: $\bar{R}(s,a) = (\tau * {\color{red}p}) + (\frac{c_s}{c_{th}} * {\color{red}p}^2) + (\bar\tau * {\color{green}r})$ (opposite) </li>
+              </small></ul>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ### Problem formulation
+              ----
+              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
+              * Action space (1 $\forall$ experiment):
+              <ul><small>
+                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
+                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
+                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
+                <li> d,e (<em>hard-coded baseline</em>) </li>
+              </small></ul>
+              * Reward functions (<em>tests adaptation</em>):
+              <ul><small>
+                <li> clustering: $R(s,a) = (\tau * {\color{green}r}) + (\frac{c_s}{c_{th}} * {\color{green}r}^2) + (\bar\tau * {\color{red}p})$ (big, durable blobs) </li>
+                <li> scattering: $\bar{R}(s,a) = (\tau * {\color{red}p}) + (\frac{c_s}{c_{th}} * {\color{red}p}^2) + (\bar\tau * {\color{green}r})$ (NOT big, durable blobs) </li>
+              </small></ul>
+              * Goal: learn <span style="color: blue"> when </span> to deposit/follow pheromone (*no direct incentive in reward!*)
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ### Experimental setting
+              ----
+              <img width="70%" data-src="res/model-params.png">
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Results
+              ----
+              <iframe width="800" height="520" src="https://www.youtube-nocookie.com/embed/1qUBvnw3tbU?si=-wSED54cdZFzg_YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </script>
           </section>
         </section>
@@ -118,7 +249,7 @@
         <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ### Zoom-in: Causal discovery
+              ## Zoom-in: Causal discovery
               ----
               How to let autonomous agents co-discover world models?
             </script>
@@ -126,7 +257,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Problem
+              ### Problem formulation
               ----
 
               <img data-src="res/agent-env-4_1.png">
@@ -135,7 +266,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Problem
+              ### Problem formulation
               ----
 
               <style>
@@ -166,7 +297,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Problem
+              ### Problem formulation
               ----
 
               <style>
@@ -198,7 +329,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ### Evaluation scenario
+              ### Experimental setting
               ----
 
               <img data-src="res/icasa.png" width="55%" height="75%">
@@ -207,7 +338,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ### Evaluation scenario
+              ### Experimental setting
               ----
 
               <style>
@@ -231,7 +362,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ### Evaluation scenario
+              ### Experimental setting
               ----
 
               <style>
@@ -260,7 +391,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Agent $\mathcal{A}_1$
+              ## Results: Agent $\mathcal{A}_1$
               ----
 
               <div class="r-stack">
@@ -272,7 +403,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Agent $\mathcal{A}_1$
+              ## Results: Agent $\mathcal{A}_1$
               ----
 
               <style>
@@ -309,7 +440,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Agent $\mathcal{A}_2$
+              ## Results: Agent $\mathcal{A}_2$
               ----
 
               <div class="r-stack">
@@ -321,7 +452,7 @@
           <section data-markdown data-auto-animate>
             <script type="text/template">
               <!-- .slide: data-transition="slide" -->
-              ## Agent $\mathcal{A}_2$
+              ## Results: Agent $\mathcal{A}_2$
               ----
 
               <style>
@@ -353,6 +484,44 @@
                   </ul>
                 </div>
               </div>
+            </script>
+          </section>
+        </section>
+
+        <section data-transition="convex">
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Others
+              ----
+              * Integration of Agents and Digital Twins
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Others
+              ----
+              * Integration of Agents and Digital Twins
+              * Distributed argumentation as a means to coordinate
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Others
+              ----
+              * Integration of Agents and Digital Twins
+              * Distributed argumentation as a means to coordinate
+              * Blockchains as a distributed computing engine
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              ## Others
+              ----
+              * Integration of Agents and Digital Twins
+              * Distributed argumentation as a means to coordinate
+              * Blockchains as a distributed computing engine
+              * Decision support systems in healthcare
+              * Applications in traffic management, smart homes, healthcare
             </script>
           </section>
         </section>
