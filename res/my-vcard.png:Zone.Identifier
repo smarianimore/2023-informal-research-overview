@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.qr-code-generator.com/
+HostUrl=https://public-api.qr-code-generator.com/v1/create/free?image_format=PNG&image_width=300&download=1&foreground_color=%23000000&frame_color=%23000000&frame_name=qrcg-scan-me-bottom-tooltip-frame&qr_code_logo=&qr_code_pattern=&qr_code_text=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMariani%3BStefano%0AFN%3AStefano+Mariani%0AORG%3AUniversity+of+Modena+and+Reggio+Emilia%0ATITLE%3AAdjunct+Professor%0AADR%3A%3B%3B%3BReggio+Emilia%3B%3B%3BItaly%0ATEL%3BWORK%3BVOICE%3A%0ATEL%3BCELL%3A%0ATEL%3BFAX%3A%0AEMAIL%3BWORK%3BINTERNET%3Astefano.mariani%40unimore.it%0AURL%3Ahttps%3A%2F%2Fsmarianimore.github.io%2F%0AEND%3AVCARD
