@@ -7,8 +7,8 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>Learning stigmergy @ ACSOS 2023</title>
-    <meta content="Talk 'Learning Stigmergic Communication for Self-organising Coordination' given by Stefano Mariani at ACSOS 2023" name="description">
+    <title>Stefano Mariani's research activities @ DISMI, 2023</title>
+    <meta content="Presentation of Stefano Mariani's research activities at DISMI internal meeting, NNovember 3rd 2023" name="description">
     <meta content="Stefano Mariani" name="author">
 
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -39,106 +39,29 @@
     <div class="reveal">
       <div class="slides">
 
-        <section data-transition="convex" data-background-image="res/acsos-home.png" data-background-opacity=0.35 data-background-size="cover">
+        <section data-transition="convex">
           <section>
             <p>
-              <small><em>4th IEEE International Conference on Autonomic Computing and Self-Organizing Systems</em> <br> Toronto, Canada, 25-29/9/2023 </small>
+              <small>Research overview meeting --- DISMI, Reggio Emilia, 3/11/2023</small>
             </p>
             <hr>
             <br>
-            <h3> Learning <br> Stigmergic Communication <br> for Self-organising Coordination </h3>
+            <h3> Overview of research activities </h3>
+            <br>
             <hr>
-            <p> <a href="https://smarianimore.github.io">Stefano Mariani</a>, Franco Zambonelli </p>
-            <p>
-              <small><em> University of Modena and Reggio Emilia </em></small>
-            </p>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              <style>
-                .container{
-                  display: flex;
-                }
-                .col{
-                  flex: 1;
-                }
-              </style>
-              <p>
-                <small><strong> Learning Stigmergic Communication for Self-organising Coordination </strong></small>
-              </p>
-              <div class="container">
-                <div class="col">
-                  <img data-src="res/these-slides.png">
-                </div>
-                <div class="col">
-                  <br>
-                  <br>
-                  Scan QR code :)
-                  <br>
-                  <br>
-                  <ul><small>
-                    <li> Browse slides yourself at your pace </li>
-                    <li> Navigation buttons at bottom right </li>
-                    <li> Go down first, then right next </li>
-                    <li> If on desktop, &lt;Esc&gt; to get enter/exit overview </li>
-                  </small></ul>
-                </div>
-              </div>
-              <p><small><em> <a href="https://smarianimore.github.io">Stefano Mariani</a>, Franco Zambonelli </em></small></p>
-            </script>
+            <p> <a href="https://smarianimore.github.io">Stefano Mariani</a> </p>
           </section>
         </section>
 
-        <section data-transition="convex" data-background-image="res/motivations-1.jpg" data-background-opacity="0.1" data-background-size="contain">
+        <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ## Motivation
+              ## Me, in a nutshell
               ----
-              * **Stigmergic communication** widely used for self-organising coordination
-                <ul><small>
-                  <li> agents communicate by locally modifying/observing shared environment </li>
-                  <li> optimisation problems, network routing, MAS/CAS, swarm robotics, ... </li>
-                  <li> simple yet powerful, scalable </li>
-                </small></ul>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Motivation
-              ----
-              * **Stigmergic communication** widely used for self-organising coordination
-                <ul><small>
-                  <li> agents communicate by locally modifying/observing shared environment </li>
-                  <li> optimisation problems, network routing, MAS/CAS, swarm robotics, ... </li>
-                  <li> simple yet powerful, scalable </li>
-                </small></ul>
-              * Communication rules mostly **hard-coded**
-                <ul><small>
-                  <li> e.g. <em>when</em> to deposit/follow pheromone, how much, ... </li>
-                  <li> typically, fine parameters tuning via simulation </li>
-                </small></ul>
-            </script>
-          </section>
-        </section>
-
-        <section data-transition="convex" data-background-image="res/goals-1.jpg" data-background-opacity="0.1" data-background-size="contain">
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Goal
-              ----
-              <p style="color: red"> Can communication policies for self-organising coordination be learnt <em>online and from scratch</em>? </p>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Goal
-              ----
-              <p style="color: red"> Can communication policies for self-organising coordination be learnt <em>online and from scratch</em>? </p>
-
-              1. is it feasible?
-              2. is it effective (wrt hard-coded)?
-              3. is it functional to self-organisation?
-              4. is it adaptive to changing goals?
+              * 2012 - Master Degree in Computer Science & Engineering at UNIBO
+              * 2016 - PhD in Computer Science at UNIBO
+              * 2016 - RTD a) at UNIMORE
+              * 2023 - RTD b) at UNIMORE (yeeeee!)
             </script>
           </section>
         </section>
@@ -146,108 +69,26 @@
         <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              <!-- .slide: data-background-image="res/marl-1.jpg" data-background-opacity="0.15" data-background-size="contain" -->
-              ## Background
+              ## My research, in a nutshell
               ----
-              * **Multiagent reinforcement learning** provides methods for online learning
-              <ul><small>
-                <li> grounded communication: action-based (meaning given by environment) </li>
-                <li> <em>independent Q-learning</em>: no sharing of observations, actions, rewards, params, ... </li>
-              </small></ul>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              <!-- .slide: data-background-image="res/stigmergy-1.jpg" data-background-opacity="0.1" data-background-size="cover" -->
-              ## Background
-              ----
-              * **Multiagent reinforcement learning** provides methods for learning
-              <ul><small>
-                <li> grounded communication: action-based (meaning given by environment) </li>
-                <li> <em>independent Q-learning</em>: no sharing of observations, actions, rewards, params, ... </li>
-              </small></ul>
-              * **Slime mold aggregation** as learning environment
-              <ul><small>
-                <li> cells move around depositing pheromone </li>
-                <li> cells prefer to move toward pheromone </li>
-                <li> pheromone evaporates gradually </li>
-              </small></ul>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              <!-- .slide: data-background-image="res/slime-mold-1.jpg" data-background-opacity="0.1" data-background-size="cover" -->
-              ## Background
-              ----
-              <iframe width="800" height="480" src="https://www.youtube.com/embed/WfnToGc3F1g?si=XvAxPNIWdF6rH9PS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              * Coordination models and languages
+                <small><ul>
+                  <li> how to coordinate the activities of multiple software agents distributed in a network? </li>
+                </ul></small>
+              * Learning to communicate and coordinate
+                <small><ul>
+                  <li> RL applied to communication protocols and coordination mechanisms </li>
+                </ul></small>
+              * Self-organisation in MAS
+                <small><ul>
+                  <li> how to achieve global behaviours with local rules? </li>
+                </ul></small>
+              * Self-development in software agents
+                <small><ul>
+                  <li> learning structural causal models of the world </li>
+                </ul></small>
 
-              Well studied and exploited in MAS and swarm robotics
-            </script>
-          </section>
-        </section>
-
-        <section data-transition="convex" data-background-image="res/marl-problem.jpg" data-background-opacity="0.1" data-background-size="contain">
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## MARL problem formulation
-              ----
-              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
-              * Action space (1 $\forall$ experiment):
-              <ul><small>
-                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
-                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
-                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
-                <li> d,e (<em>hard-coded baseline</em>) </li>
-              </small></ul>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## MARL problem formulation
-              ----
-              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
-              * Action space (1 $\forall$ experiment):
-              <ul><small>
-                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
-                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
-                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
-                <li> d,e (<em>hard-coded baseline</em>) </li>
-              </small></ul>
-              * Reward functions (<em>tests adaptation</em>):
-              <ul><small>
-                <li> clustering: $R(s,a) = (\tau * {\color{green}r}) + (\frac{c_s}{c_{th}} * {\color{green}r}^2) + (\bar\tau * {\color{red}p})$ (big, durable blobs) </li>
-                <li> scattering: $\bar{R}(s,a) = (\tau * {\color{red}p}) + (\frac{c_s}{c_{th}} * {\color{red}p}^2) + (\bar\tau * {\color{green}r})$ (opposite) </li>
-              </small></ul>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## MARL problem formulation
-              ----
-              * Obs space: 1-hop pheromone gradient (<em>minimal!</em>)
-              * Action space (1 $\forall$ experiment):
-              <ul><small>
-                <li> (a) drop-chemical, (b) move-toward-chemical, (c) random-walk (<em>challenging</em>) </li>
-                <li> a,b,c + (d) move-and-drop + (e) walk-and-drop (<em>tests action "shadowing"</em>) </li>
-                <li> c + (f) stand-still (<em>no comm baseline</em>) </li>
-                <li> d,e (<em>hard-coded baseline</em>) </li>
-              </small></ul>
-              * Reward functions (<em>tests adaptation</em>):
-              <ul><small>
-                <li> clustering: $R(s,a) = (\tau * {\color{green}r}) + (\frac{c_s}{c_{th}} * {\color{green}r}^2) + (\bar\tau * {\color{red}p})$ (big, durable blobs) </li>
-                <li> scattering: $\bar{R}(s,a) = (\tau * {\color{red}p}) + (\frac{c_s}{c_{th}} * {\color{red}p}^2) + (\bar\tau * {\color{green}r})$ (NOT big, durable blobs) </li>
-              </small></ul>
-              * Goal: learn <span style="color: blue"> when </span> to deposit/follow pheromone (*no direct incentive in reward!*)
-            </script>
-          </section>
-
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Experimental setting
-              ----
-              <img width="70%" data-src="res/model-params.png">
-
-              <small> <em>(typical slide to skip, details in paper)</em> </small>
+              **Essentially: make multiple entities coordinate at best with minimal "design effort"**
             </script>
           </section>
         </section>
@@ -255,62 +96,16 @@
         <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              <!-- .slide: data-background-image="res/results-1.jpg" data-background-opacity="0.1" data-background-size="cover" -->
-              ## Results: (1) it is feasible :)
+              ### Zoom-in: Learning to coordinate
               ----
-              <img data-src="res/example-success-start.png">
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              <!-- .slide: data-background-image="res/results-1.jpg" data-background-opacity="0.1" data-background-size="cover" -->
-              ## Results: (1) it is feasible :)
-              ----
-              <style>
-                .container{
-                  display: flex;
-                }
-                .col{
-                  flex: 1;
-                }
-              </style>
-              <div class="container">
-                <div class="col">
-                  <img data-src="res/example-success-start.png">
-                </div>
-                <div class="col">
-                  <img data-src="res/example-success-end.png">
-                </div>
-              </div>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Results: (1) it is feasible :)
-              ----
-              <img data-src="res/BS-chemical-gradient-02-03_29_41_745_PM-16-Dec-2022_cluster size.png">
+              How to let autonomous agents independently learn to exploit communication for coordinating?
 
-              Keys: low $\alpha$, high $\gamma$, goal set (1 cluster w/ most agents)
-            </script>
-          </section>
-        </section>
-
-        <section data-transition="convex">
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              <!-- .slide: data-background-image="res/results-2.jpg" data-background-opacity="0.1" data-background-size="cover" -->
-              ## Results: (2) it is effective :)
-              ----
-              <iframe width="800" height="480" src="https://www.youtube.com/embed/7eSnB8cpmBg?si=YL7GxlT6El-GNjwS"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-              Keys: small radius, high $\gamma$, high $p$ $\implies$ 4x speed up!
+              <iframe width="560" height="400" src="https://www.youtube-nocookie.com/embed/1qUBvnw3tbU?si=-wSED54cdZFzg_YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </script>
           </section>
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ## Results: (2) it is effective :)
+              ### Zoom-in: Learning to coordinate
               ----
               <img width="65%" data-src="res/BS-3actions-gradient-ticks-01-11_45_55_375_AM-26-Jan-2023_episode timestep.png">
               <small> <br><br><br><br> learning agents </small>
@@ -320,116 +115,244 @@
           </section>
         </section>
 
-        <section data-transition="convex" data-background-image="res/results-3.jpg" data-background-opacity="0.1" data-background-size="cover">
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Results: (3) it is self-org :)
-              ----
-              <style>
-                .container{
-                  display: flex;
-                }
-                .col{
-                  flex: 1;
-                }
-              </style>
-              <div class="container">
-                <div class="col">
-                  <img data-src="res/self-org.png">
-                </div>
-                <div class="col">
-                  <br>
-                  <ul>
-                    <li> <em>Beacons</em>: signal to others an opportunity for clustering </li>
-                  </ul>
-                </div>
-              </div>
-              <p><small> (quantitative analysis of emergence of roles in paper) </small></p>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Results: (3) it is self-org :)
-              ----
-              <style>
-                .container{
-                  display: flex;
-                }
-                .col{
-                  flex: 1;
-                }
-              </style>
-              <div class="container">
-                <div class="col">
-                  <img data-src="res/self-org.png">
-                </div>
-                <div class="col">
-                  <br>
-                  <ul>
-                    <li> <em>Beacons</em>: signal to others an opportunity for clustering </li>
-                    <li> <em>Followers</em>: listen and react to signals to form clusters </li>
-                  </ul>
-                </div>
-              </div>
-              <p><small> (quantitative analysis of emergence of roles in paper) </small></p>
-            </script>
-          </section>
-          <section data-markdown data-auto-animate>
-            <script type="text/template">
-              ## Results: (3) it is self-org :)
-              ----
-              <style>
-                .container{
-                  display: flex;
-                }
-                .col{
-                  flex: 1;
-                }
-              </style>
-              <div class="container">
-                <div class="col">
-                  <img data-src="res/self-org.png">
-                </div>
-                <div class="col">
-                  <br>
-                  <ul>
-                    <li> <em>Beacons</em>: signal to others an opportunity for clustering </li>
-                    <li> <em>Followers</em>: listen and react to signals to form clusters </li>
-                    <li> <em>Explorers</em>: give chance to escape local optima </li>
-                  </ul>
-                </div>
-              </div>
-              <p><small> (quantitative analysis of emergence of roles in paper) </small></p>
-            </script>
-          </section>
-        </section>
-
         <section data-transition="convex">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ## Results: (4) it is adaptive :)
+              ### Zoom-in: Causal discovery
               ----
-
-              <iframe width="800" height="400" src="https://www.youtube.com/embed/y-ZyXFaR8bQ?si=FF1IRZxzvVpi2y6p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-              <ul>
-                <li> $R(s,a) \rightarrow \bar{R}(s,a)$ $\implies$ clustering $\rightarrow$ scattering </li>
-                <li> <em>Same comm means (pheromone), opposite result!</em> </li>
-              </ul>
-
+              How to let autonomous agents co-discover world models?
             </script>
           </section>
-        </section>
-
-        <section data-transition="convex" data-background-image="res/next-steps.jpg" data-background-opacity="0.1" data-background-size="contain">
           <section data-markdown data-auto-animate>
             <script type="text/template">
-              ## What now?
+              <!-- .slide: data-transition="slide" -->
+              ## Problem
               ----
-              1. Further study adaptation (change goal online)
-              2. Generalise to other environments (eg obstacles) and tasks (eg foraging)
-              3. Benchmark with different learning algos (but still independent learners)
-              4. Compare against evolutionary algorithms
+
+              <img data-src="res/agent-env-4_1.png">
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Problem
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/agent-env-4_1.png">
+                </div>
+                <div class="col">
+                  <ul><small>
+                    <li> $N$ agents $\mathcal{A} = \{\mathcal{A}_i\}, i = 1, ..., N$ </li>
+                    <li class="fragment"> $V$ variables = $\mathcal{C} \cup U$ (controlled + uncontrolled) </li>
+                    <li class="fragment"> Each $\mathcal{A}_i$ learns <strong>local causal net</strong> $\mathcal{L}_i$ with observable vars $P_i = \{\mathcal{C}_i \cup U_i\} \subset V$ </li>
+                    <li class="fragment"> Each $\mathcal{A}_i$ has <strong>partial obs</strong>: $V = \bigcup_{i=1}^N P_i$ (overlaps may exist) </li>
+                    <li class="fragment"> Agents can communicate </li>
+                    <li class="fragment"> Agents have criteria to trigger collaboration </li>
+                  </small></ul>
+                </div>
+              </div>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Problem
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/agent-env-4_1.png">
+                </div>
+                <div class="col">
+                  <ul><small>
+                    <li> $N$ agents $\mathcal{A} = \{\mathcal{A}_i\}, i = 1, ..., N$ </li>
+                    <li> $V$ variables = $\mathcal{C} \cup U$ (controlled + uncontrolled) </li>
+                    <li> Each $\mathcal{A}_i$ learns <strong>local causal net</strong> $\mathcal{L}_i$ with observable vars $P_i = \{\mathcal{C}_i \cup U_i\} \subset V$ </li>
+                    <li> Each $\mathcal{A}_i$ has <strong>partial obs</strong>: $V = \bigcup_{i=1}^N P_i$ (overlaps may exist) </li>
+                    <li> Agents can communicate </li>
+                    <li> Agents have <em>criteria to trigger collaboration</em> </li>
+                  </small></ul>
+                </div>
+              </div>
+              <p style="color: red"> Each $\mathcal{A}_i$ wants to learn $M_i$ refining $\mathcal{L}_i$ with unknown variables $\neg{P}_i = V \setminus P_i$ and their links with $P_i$ </p>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ### Evaluation scenario
+              ----
+
+              <img data-src="res/icasa.png" width="55%" height="75%">
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ### Evaluation scenario
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/fig60_1.png" height="75%">
+                </div>
+                <div class="col">
+                  <img data-src="res/icasa.png" width="55%" height="75%">
+                </div>
+              </div>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ### Evaluation scenario
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/fig60_1.png" height="75%">
+                </div>
+                <div class="col">
+                  <img data-src="res/icasa.png" width="55%" height="75%">
+                </div>
+              </div>
+              <ul>
+                <li> iCasa (simulated) smart home </li>
+                <li> 2 agents: "red" (girl, $\mathcal{A}_1$) and "blue" (boy, $\mathcal{A}_2$) </li>
+                <li> Actuators (circles) $\in \mathcal{C}$ and sensors (boxes) $\in U$ </li>
+              </ul>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Agent $\mathcal{A}_1$
+              ----
+
+              <div class="r-stack">
+                <img data-src="res/fig61_net_v2_shaded_1.png" height="75%">
+                <img class="fragment" data-src="res/fig63_net_v2_shaded_1.png" height="75%">
+              </div>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Agent $\mathcal{A}_1$
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/fig61_net_v2_shaded_1.png">
+                </div>
+                <div class="col">
+                  <img data-src="res/fig63_net_v2_shaded_1.png">
+                </div>
+              </div>
+              <div class="container">
+                <div class="col">
+                  <ul>
+                    <li> FP$_{\mathcal{L}_1}$ = FP$_{M_1}$ </li>
+                    <li> FN$_{\mathcal{L}_1}$ = FN$_{M_1}$ </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li> SHD$_{\mathcal{L}_1}$ > SHD$_{M_1}$ <br> $\implies M_1$ better </li>
+                  </ul>
+                </div>
+              </div>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Agent $\mathcal{A}_2$
+              ----
+
+              <div class="r-stack">
+                <img data-src="res/fig62_net_v2_shaded_1.png" height="75%">
+                <img class="fragment" data-src="res/fig63bis_net_v2_shaded_1.png" height="75%">
+              </div>
+            </script>
+          </section>
+          <section data-markdown data-auto-animate>
+            <script type="text/template">
+              <!-- .slide: data-transition="slide" -->
+              ## Agent $\mathcal{A}_2$
+              ----
+
+              <style>
+                .container{
+                  display: flex;
+                }
+                .col{
+                  flex: 1;
+                }
+              </style>
+              <div class="container">
+                <div class="col">
+                  <img data-src="res/fig62_net_v2_shaded_1.png">
+                </div>
+                <div class="col">
+                  <img data-src="res/fig63bis_net_v2_shaded_1.png">
+                </div>
+              </div>
+              <div class="container">
+                <div class="col">
+                  <ul>
+                    <li> FP$_{\mathcal{L}_2}$ = FP$_{M_2}$ </li>
+                    <li> FN$_{\mathcal{L}_2}$ > FN$_{M_2}$ </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li> SHD$_{\mathcal{L}_2}$ >> SHD$_{M_2}$ <br> $\implies M_2$ better </li>
+                  </ul>
+                </div>
+              </div>
             </script>
           </section>
         </section>
@@ -440,28 +363,6 @@
           <hr>
           <p><a href="mailto:stefano.mariani@unimore.it"> Stefano Mariani </a></p>
           <hr>
-          <style>
-            .container{
-              display: flex;
-            }
-            .col{
-              flex: 1;
-            }
-          </style>
-          <div class="container">
-            <div class="col">
-              <br>
-              <p><strong>Questions welcome :)</strong></p>
-            </div>
-            <div class="col">
-              <img width="65%" data-src="res/these-slides.png">
-            </div>
-            <div class="col">
-              <br>
-              <p>$\Leftarrow$ get these slides :)</p>
-            </div>
-          </div>
-          <p>(also: <em>we are having fun, join us!</em>)</p>
         </section>
 
       </div>
